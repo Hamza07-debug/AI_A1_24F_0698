@@ -44,16 +44,14 @@ BLUE = (70, 150, 240)
 YELLOW = (255, 225, 60)
 PURPLE = (185, 60, 250)
 
-# movement order (must follow given order from assignment)
+# movement order (strict order from assignment – no top-right or bottom-left)
 DIRS = [
     (-1, 0),   # Up
     (0, 1),    # Right
     (1, 0),    # Down
-    (1, 1),    # Down-Right
+    (1, 1),    # Bottom-Right (Diagonal)
     (0, -1),   # Left
-    (-1, -1),  # Up-Left
-    (-1, 1),   # Top-Right
-    (1, -1)    # Bottom-Left
+    (-1, -1),  # Top-Left (Diagonal)
 ]
 
 screen = None
@@ -660,7 +658,7 @@ def main():
 
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("GOOD PERFORMANCE TIME APP")
+    pygame.display.set_caption("AI Pathfinder - Assignment 1")
     clock = pygame.time.Clock()
     font = pygame.font.SysFont("arial", 18)
     font_big = pygame.font.SysFont("arial", 26)
@@ -705,6 +703,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 
