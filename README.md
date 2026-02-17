@@ -1,6 +1,3 @@
-# AI_A1_24F_0698
-Uninformed Search Algorithms in Grid (AI Assignment 1)
-
 ## AI Pathfinder – Uninformed Search Visualizer
 
 This is a small Python project where I made a grid based pathfinder using Pygame.  
